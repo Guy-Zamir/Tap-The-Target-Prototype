@@ -1,16 +1,14 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using static UnityEngine.GraphicsBuffer;
 
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    [SerializeField] public GameData GameData; //{ get; private set; }
+    [SerializeField] public GameData GameData { get; private set; }
 
     public List<ModeData> ModesDataList = new();
 
