@@ -395,6 +395,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33251962893497e489b962ed9c9cf779, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameData: {fileID: 0}
   ModesDataList: []
 --- !u!4 &361468181
 Transform:
