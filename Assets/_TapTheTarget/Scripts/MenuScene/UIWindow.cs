@@ -21,12 +21,12 @@ public class UIWindow : MonoBehaviour
     public virtual void Open()
     {
         closingWindowButton.SetActive(true);
-        StartCoroutine(Animation.Scale(windowUI, Vector3.zero, Vector3.one, WINDOW_ANIMATION_DURATION));
+        Animation.Scale(windowUI, Vector3.zero, Vector3.one, WINDOW_ANIMATION_DURATION);
     }
 
     public virtual void Close()
     {
         closingWindowButton.SetActive(false);
-        StartCoroutine(Animation.Scale(windowUI, Vector3.one, Vector3.zero, WINDOW_ANIMATION_DURATION));
+        Animation.Scale(windowUI, Vector3.one, Vector3.zero, WINDOW_ANIMATION_DURATION);
     }
 }

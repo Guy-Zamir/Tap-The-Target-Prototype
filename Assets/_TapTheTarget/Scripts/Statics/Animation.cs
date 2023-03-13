@@ -1,9 +1,11 @@
 using System.Collections;
+using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Animation
 {
-    public static IEnumerator Scale(GameObject gameObject, Vector3 sizeFrom, Vector3 sizeTo, float duration)
+    public async static void Scale(GameObject gameObject, Vector3 sizeFrom, Vector3 sizeTo, float duration)
     {
         float timePassed = 0f;
         gameObject.transform.localScale = sizeFrom;
@@ -13,7 +15,7 @@ public class Animation
             float t = timePassed / duration;
             gameObject.transform.localScale = Vector3.Lerp(sizeFrom, sizeTo, t);
             timePassed += Time.deltaTime;
-            yield return null;
+            await Task.Yield();
         }
 
         gameObject.transform.localScale = sizeTo;
